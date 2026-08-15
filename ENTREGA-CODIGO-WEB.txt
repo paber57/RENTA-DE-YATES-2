@@ -1,0 +1,36 @@
+RENTA DE YATES MAZATLÁN — PROYECTO COMPLETO
+
+Actualización incluida:
+- Facebook: https://www.facebook.com/profile.php?id=61551912925671
+- Instagram y TikTok conservados.
+- WhatsApp y panel administrador conservados.
+
+IMPORTANTE
+Esta web no es un único archivo index.html. Es una aplicación Next.js/Vinext porque incluye:
+- páginas internas por servicio;
+- precios y reservaciones dinámicas;
+- carga múltiple de imágenes;
+- panel administrador;
+- almacenamiento de catálogo e imágenes.
+
+ARCHIVOS PRINCIPALES
+- app/page.tsx: inicio.
+- app/globals.css: diseño y adaptación a celular.
+- app/yates/: catálogo, detalle y reservación de yates.
+- app/servicios/: RZR, Jet Ski, Suburban y demás servicios.
+- app/admin/: panel administrador.
+- app/api/: catálogo y carga de imágenes.
+- lib/contact.ts: WhatsApp, Instagram, TikTok y Facebook.
+- lib/catalog.ts: productos, servicios y precios iniciales.
+- lib/yacht-extras.ts: extras de las reservaciones.
+- public/: logotipo e imágenes incluidas en el código.
+- drizzle/ y db/: estructura de la base de datos.
+
+PARA SUBIRLA EN OTRO HOSTING
+Se necesita Node.js 22 o superior y un hosting compatible con aplicaciones Next.js/Cloudflare Workers. El panel usa una base D1 y almacenamiento R2; al migrar a otro proveedor hay que crear esos servicios y conectar los nombres DB y BUCKET.
+
+PARA CAMBIAR SOLAMENTE EL DOMINIO
+No es necesario convertir la web a HTML ni perder el panel. Es mejor conservar la aplicación completa y conectar el dominio mediante la configuración DNS del proveedor donde compraste el dominio. Los registros exactos dependen de ese proveedor y del hosting elegido.
+
+Sitio actual:
+https://renta-yates-mazatlan.v72fkgvbtz.chatgpt.site
