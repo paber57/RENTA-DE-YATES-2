@@ -1,13 +1,12 @@
-import { getChatGPTUser } from "../../../chatgpt-auth";
-import { getRuntimeEnv, isAdmin } from "../../../../lib/catalog";
+import { hasAdminSession } from "../../../../lib/admin-auth";
+import { getRuntimeEnv } from "../../../../lib/catalog";
 
 const allowedTypes = new Map([
   ["image/jpeg", "jpg"], ["image/png", "png"], ["image/webp", "webp"], ["image/avif", "avif"],
 ]);
 
 export async function POST(request: Request) {
-  const user = await getChatGPTUser();
-  if (!user || !(await isAdmin(user.email))) return Response.json({ error: "No autorizado" }, { status: 401 });
+  if (!(await hasAdminSession())) return Response.json({ error: "No autorizado" }, { status: 401 });
   const runtimeEnv = await getRuntimeEnv();
   if (!runtimeEnv.BUCKET) return Response.json({ error: "Almacenamiento no disponible" }, { status: 503 });
 
