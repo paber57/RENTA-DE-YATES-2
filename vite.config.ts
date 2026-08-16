@@ -5,6 +5,7 @@ import { sites } from "./build/sites-vite-plugin";
 
 const RENTAYATES_D1_DATABASE_ID = "3781c8b2-7885-4bab-b05d-98596bfd11f7";
 const RENTAYATES_D1_DATABASE_NAME = "rentayates";
+const RENTAYATES_R2_BUCKET_NAME = "rentayatesmedia";
 
 const { d1, r2 } = hostingConfig;
 
@@ -27,7 +28,7 @@ const localBindingConfig = {
     ? [
         {
           binding: r2,
-          bucket_name: "site-creator-r2",
+          bucket_name: RENTAYATES_R2_BUCKET_NAME,
         },
       ]
     : [],
