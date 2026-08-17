@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, CircleAlert, Clock3, MapPin, ShieldCheck } from "lucide-react";
@@ -8,6 +9,48 @@ import ServiceExplorer from "./service-explorer";
 import MediaCarousel from "../../media-carousel";
 
 export const dynamic = "force-dynamic";
+
+const serviceSeo: Record<string, { title: string; description: string }> = {
+  rzr: {
+    title: "Renta de RZR y Can-Am en Mazatlán | Precios y Rutas",
+    description: "Renta RZR y Can-Am en Mazatlán por hora, por día o en rutas guiadas. Consulta precios, opciones y disponibilidad.",
+  },
+  jetski: {
+    title: "Renta de Jet Ski en Mazatlán | Precios y Rutas Guiadas",
+    description: "Renta jet skis en Mazatlán por tiempo o reserva rutas guiadas de 2 y 3 horas. Consulta precios y disponibilidad por WhatsApp.",
+  },
+  jetcar: {
+    title: "Jetcar en Mazatlán | Experiencia sobre el Agua",
+    description: "Vive la experiencia Jetcar en Mazatlán. Consulta precio, ubicación y disponibilidad para manejar sobre el agua.",
+  },
+  suburban: {
+    title: "Renta de Suburban en Mazatlán | Traslados Privados",
+    description: "Traslados privados y renta de Suburban en Mazatlán con chofer. Consulta opciones, precios y disponibilidad.",
+  },
+};
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const catalog = await getCatalog();
+  const service = catalog.services.find((item) => item.id === id && item.id !== "yates");
+  if (!service) return {};
+  const seo = serviceSeo[id] || {
+    title: `${service.name} en Mazatlán | Precios y Reservas`,
+    description: `${service.description} Consulta precios y disponibilidad en Mazatlán.`,
+  };
+  return {
+    title: seo.title,
+    description: seo.description,
+    alternates: { canonical: `/servicios/${id}` },
+    openGraph: {
+      title: seo.title,
+      description: seo.description,
+      url: `/servicios/${id}`,
+      type: "website",
+      images: service.imageUrl ? [{ url: service.imageUrl, alt: `${service.name} en Mazatlán` }] : undefined,
+    },
+  };
+}
 
 export default async function ServicePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -27,7 +70,7 @@ export default async function ServicePage({ params }: { params: Promise<{ id: st
     suburban: { eyebrow: "Traslados privados", headline: "Muévete con comodidad y estilo." },
   };
   const copy = categoryCopy[service.id] || { eyebrow: "Experiencias en Mazatlán", headline: `Disfruta ${service.name} a tu manera.` };
-  const heroTitle = service.id === "jetski" ? "Rutas guiadas en Jet Ski" : service.name;
+  const heroTitle = service.id === "jetski" ? "Renta y rutas guiadas en Jet Ski" : service.name;
 
   return <main className="service-detail-page">
     <PublicHeader active={service.id} />
