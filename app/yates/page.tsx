@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArrowUpRight, MessageCircle, ShieldCheck } from "lucide-react";
 import { getCatalog } from "../../lib/catalog";
 import { whatsappBase } from "../../lib/contact";
@@ -5,6 +6,19 @@ import PublicHeader from "../public-header";
 import FleetExplorer from "./fleet-explorer";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Renta de Yates en Mazatlán | Flota y Precios",
+  description: "Conoce nuestra flota de yates en Mazatlán, capacidades, amenidades y precios por hora. Compara opciones y solicita disponibilidad por WhatsApp.",
+  alternates: { canonical: "/yates" },
+  openGraph: {
+    title: "Renta de Yates en Mazatlán | Flota y Precios",
+    description: "Compara yates, capacidades, amenidades y precios para tu paseo o evento en Mazatlán.",
+    url: "/yates",
+    type: "website",
+  },
+};
+
 const whatsapp = `${whatsappBase}?text=Hola%2C%20quiero%20ayuda%20para%20elegir%20un%20yate%20en%20Mazatl%C3%A1n`;
 
 export default async function YachtsPage() {
@@ -16,7 +30,7 @@ export default async function YachtsPage() {
 
   return <main className="fleet-page">
     <PublicHeader active="yates" />
-    <section className="fleet-hero category-hero" style={{ backgroundImage: `url('${service?.imageUrl || catalog.settings.heroImage}')` }}><div className="service-detail-shade" /><div><p>Flota privada en Mazatlán</p><h1>Tu mejor día<br />empieza en el mar.</h1><span>{service?.description || "Yates privados para celebrar, descansar y descubrir Mazatlán desde otra perspectiva."}</span><div className="category-hero-actions"><a href="#flota">Explorar la flota <ArrowUpRight size={16} /></a><a href="#armar-yate">Armar mi experiencia</a></div><div className="category-hero-stats"><span><small>Tarifas</small><strong>${minimum.toLocaleString("es-MX")} – ${maximum.toLocaleString("es-MX")}/h</strong></span><span><small>Incluido</small><strong>Capitán y seguridad</strong></span><span><small>Atención</small><strong>Todos los días</strong></span></div></div></section>
+    <section className="fleet-hero category-hero" style={{ backgroundImage: `url('${service?.imageUrl || catalog.settings.heroImage}')` }}><div className="service-detail-shade" /><div><p>Flota privada en Mazatlán</p><h1>Renta de yates<br />en Mazatlán.</h1><span>{service?.description || "Yates privados para celebrar, descansar y descubrir Mazatlán desde otra perspectiva."}</span><div className="category-hero-actions"><a href="#flota">Explorar la flota <ArrowUpRight size={16} /></a><a href="#armar-yate">Armar mi experiencia</a></div><div className="category-hero-stats"><span><small>Tarifas</small><strong>${minimum.toLocaleString("es-MX")} – ${maximum.toLocaleString("es-MX")}/h</strong></span><span><small>Incluido</small><strong>Capitán y seguridad</strong></span><span><small>Atención</small><strong>Todos los días</strong></span></div></div></section>
     <section className="fleet-intro"><div><p className="eyebrow blue">Compara con claridad</p><h2>Todos nuestros yates</h2></div><p>{service?.description || "Yates privados para paseos, celebraciones y eventos frente a las mejores vistas de Mazatlán."} Abre cualquier opción para conocer amenidades, promociones y calcular tu reservación.</p></section>
     <FleetExplorer yachts={catalog.yachts} />
     <section className="fleet-help"><ShieldCheck size={28} /><div><h2>¿No sabes cuál elegir?</h2><p>Dinos cuántas personas son, fecha y presupuesto. Te recomendamos las mejores opciones disponibles.</p></div><a href={whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={17} /> Recibir recomendación</a></section>
