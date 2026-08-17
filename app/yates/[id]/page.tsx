@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowUpRight, Clock3, CreditCard, Menu, MessageCircle, RefreshCcw, ShieldCheck } from "lucide-react";
@@ -7,6 +8,27 @@ import SocialLinks from "../../social-links";
 import YachtBookingExperience from "./yacht-booking-experience";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const catalog = await getCatalog();
+  const yacht = catalog.yachts.find((item) => item.id === id);
+  if (!yacht) return {};
+  const title = `${yacht.name} en Mazatlán | Precio y Reservación`;
+  const description = `Renta el yate ${yacht.name} en Mazatlán. ${yacht.capacity}. Desde ${yacht.price} ${yacht.unit}. Consulta amenidades, promociones y disponibilidad.`;
+  return {
+    title,
+    description,
+    alternates: { canonical: `/yates/${yacht.id}` },
+    openGraph: {
+      title,
+      description,
+      url: `/yates/${yacht.id}`,
+      type: "website",
+      images: yacht.imageUrl ? [{ url: yacht.imageUrl, alt: `${yacht.name} en Mazatlán` }] : undefined,
+    },
+  };
+}
 
 export default async function YachtDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
