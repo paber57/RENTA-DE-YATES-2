@@ -47,7 +47,7 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ id
         "@id": `${yachtUrl}#service`,
         name: `Renta del yate ${yacht.name} en Mazatlán`,
         url: yachtUrl,
-        description: `Renta el yate ${yacht.name} en Mazatlán. ${yacht.capacity}. Consulta precio, amenidades y disponibilidad.`,
+        description: `Renta el yate ${yacht.name} en Mazatlán. ${yacht.capacity}. Consulta precio, amenidades y disponibilidad para tu fecha.`,
         areaServed: { "@type": "City", name: "Mazatlán" },
         provider: { "@id": "https://rentayatesmazatlan.com/#business" },
         image: yacht.imageUrl || undefined,
@@ -56,7 +56,7 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ id
           priceCurrency: "MXN",
           price: yacht.hourlyRate,
           url: yachtUrl,
-          availability: "https://schema.org/InStock",
+          description: `Tarifa por hora sujeta a disponibilidad, duración mínima y condiciones de reservación.`,
         },
       },
       {
@@ -79,7 +79,7 @@ export default async function YachtDetailPage({ params }: { params: Promise<{ id
 
     <section className="fleet-intro" aria-labelledby="seo-yacht-heading">
       <div><p className="eyebrow blue">Yate privado en Mazatlán</p><h2 id="seo-yacht-heading">Renta {yacht.name} en Mazatlán</h2></div>
-      <p>{yacht.name} es una opción para grupos de {yacht.capacity.toLowerCase()}. Su tarifa inicia desde ${yacht.hourlyRate.toLocaleString("es-MX")} MXN por hora. Revisa en esta página sus fotografías, amenidades, promociones y opciones de reservación; si tu fecha está disponible, puedes solicitar confirmación directamente por WhatsApp.</p>
+      <p>{yacht.name} es una opción para grupos de {yacht.capacity.toLowerCase()}. Su tarifa inicia desde ${yacht.hourlyRate.toLocaleString("es-MX")} MXN por hora y el mínimo de reservación es de {yacht.minimumHours} {yacht.minimumHours === 1 ? "hora" : "horas"}. Revisa fotografías, amenidades y promociones; la disponibilidad y el precio final se confirman para tu fecha antes de reservar.</p>
     </section>
 
     <section className="reserve-trust-strip"><article><ShieldCheck /><div><strong>Reserva 100% segura</strong><span>Tus datos protegidos</span></div></article><article><CreditCard /><div><strong>Sin pago inmediato</strong><span>Solo solicitud de disponibilidad</span></div></article><article><Clock3 /><div><strong>Confirmación rápida</strong><span>Te respondemos en minutos</span></div></article><article><RefreshCcw /><div><strong>Cancelación flexible</strong><span>Consulta nuestras políticas</span></div></article></section>
