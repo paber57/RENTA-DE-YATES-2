@@ -46,6 +46,7 @@ const faq = [
 ];
 
 export default async function YachtsPage() {
+  // Keeping this page server-rendered lets prices and availability-related catalog details stay current.
   const catalog = await getCatalog();
   const service = catalog.services.find((item) => item.id === "yates");
   const prices = catalog.yachts.map((yacht) => yacht.hourlyRate).filter(Boolean);
