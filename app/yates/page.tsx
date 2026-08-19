@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowUpRight, MessageCircle, ShieldCheck } from "lucide-react";
 import { getCatalog } from "../../lib/catalog";
 import { whatsappBase } from "../../lib/contact";
@@ -76,7 +77,7 @@ export default async function YachtsPage() {
 
     <section className="fleet-intro" aria-labelledby="precios-yates-mazatlan">
       <div><p className="eyebrow blue">Precios y opciones</p><h2 id="precios-yates-mazatlan">Precios de renta de yates en Mazatlán</h2></div>
-      <p>La tarifa cambia según la embarcación, su capacidad y las amenidades. Actualmente nuestra flota maneja opciones desde ${minimum.toLocaleString("es-MX")} hasta ${maximum.toLocaleString("es-MX")} por hora. Puedes abrir cada yate para comparar precio, capacidad y lo que incluye antes de solicitar disponibilidad.</p>
+      <p>La tarifa cambia según la embarcación, su capacidad y las amenidades. Actualmente nuestra flota maneja opciones desde ${minimum.toLocaleString("es-MX")} hasta ${maximum.toLocaleString("es-MX")} por hora. Puedes abrir cada yate para comparar precio, capacidad y lo que incluye antes de solicitar disponibilidad. <Link href="/precios-renta-yates-mazatlan">Consulta también nuestra guía completa de precios de renta de yates en Mazatlán.</Link></p>
     </section>
 
     <section className="fleet-intro" aria-labelledby="como-elegir-yate">
