@@ -1875,3 +1875,187 @@ footer .social-links > a { color: #fff; border-color: rgba(255,255,255,.2); back
 @media (max-width: 680px) {
   .admin-shell .extra-admin-row { grid-template-columns: 72px 1fr 1fr; }
 }
+/* Homepage refresh: bright editorial layout based on the approved mockup. */
+.home-v2 { background: #f8fafb; }
+.home-v2 .home-nav-shell { height: 82px; padding: 0 max(3vw,24px); box-shadow: 0 2px 18px rgba(8,38,61,.07); }
+.home-v2 .home-nav-shell .brand-logo { width: 58px; height: 58px; flex-basis: 58px; }
+.home-v2 .home-nav-shell nav { gap: clamp(16px,2vw,31px); }
+.home-v2 .home-nav-shell nav a { font-size: 11px; }
+.home-v2 .home-nav-shell .nav-cta { min-height: 44px; padding: 0 18px; border-radius: 8px; background: #0c9658; box-shadow: 0 8px 20px rgba(12,150,88,.17); }
+
+.home-v2 .hero { min-height: 590px; align-items: center; }
+.home-v2 .hero-motion { right: 27%; inset-block: -3%; inset-left: -3%; background-position: center; }
+.home-v2 .hero-shade { right: 27%; background: linear-gradient(90deg,rgba(3,27,44,.97) 0%,rgba(3,34,52,.83) 48%,rgba(3,35,51,.28) 100%),linear-gradient(0deg,rgba(2,26,40,.45),transparent 65%); }
+.home-v2 .hero-content { width: min(700px,60%); margin: 0 0 0 max(5vw,38px); padding: 64px 0; }
+.home-v2 .hero .eyebrow { margin-bottom: 22px; color: #3dd7d2; font-size: 10px; letter-spacing: .18em; }
+.home-v2 .hero h1 { max-width: 660px; font-size: clamp(52px,5.6vw,78px); line-height: .86; }
+.home-v2 .hero h1 em { color: #e8feff; }
+.home-v2 .hero-copy { margin: 23px 0 22px; font-size: 18px; }
+.home-v2 .hero-features { margin-bottom: 28px; gap: 29px; font-size: 11px; }
+.home-v2 .hero-features span { color: #fff; }
+.home-v2 .hero-features span::first-letter { color: #35d2cf; }
+.home-v2 .hero-actions .button { min-height: 50px; padding-inline: 22px; border-radius: 8px; background: #0aaa62; box-shadow: 0 13px 26px rgba(10,170,98,.24); }
+.home-v2 .hero-actions .text-button { color: #fff; font-size: 11px; }
+.home-v2 .hero-feature-card { position: absolute; z-index: 3; inset: 0 0 0 auto; width: 27%; display: flex; align-items: flex-end; background-position: center; background-size: cover; }
+.home-v2 .hero-feature-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg,rgba(3,24,38,.76),rgba(3,25,39,.02) 58%); }
+.home-v2 .hero-feature-card > div { position: relative; width: calc(100% - 38px); margin: 0 19px 20px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; border-radius: 9px; background: rgba(3,29,44,.9); box-shadow: 0 12px 28px rgba(0,0,0,.24); backdrop-filter: blur(8px); }
+.home-v2 .hero-feature-card strong { font-size: 13px; }
+.home-v2 .hero-feature-card span { color: #d9e9ee; font-size: 9px; }
+
+.home-v2 .popular-section { max-width: 1440px; padding: 36px max(2.7vw,20px) 0; }
+.home-v2 .home-section-title { margin-bottom: 23px; text-align: center; }
+.home-v2 .home-section-title h2 { margin: 0; color: #08263d; font-size: 21px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.home-v2 .popular-grid { grid-auto-columns: minmax(235px,1fr); gap: 14px; padding-bottom: 18px; }
+.home-v2 .popular-card { height: 335px; padding: 0; border-radius: 16px; }
+.home-v2 .popular-card::before { background: linear-gradient(0deg,rgba(3,22,35,.97) 0%,rgba(4,26,40,.76) 33%,rgba(4,27,41,.06) 73%); }
+.home-v2 .popular-badge { top: 13px; left: 13px; padding: 7px 10px; border-radius: 99px; }
+.home-v2 .popular-card-copy { left: 17px; right: 17px; bottom: 17px; display: flex; flex-direction: column; align-items: flex-start; }
+.home-v2 .popular-card h3 { order: 1; margin: 0 0 7px; font-family: var(--sans); font-size: 17px; line-height: 1.1; }
+.home-v2 .popular-card p { order: 2; margin: 0 0 9px; color: #d5e9ed; font-size: 8px; }
+.home-v2 .popular-card-copy strong { order: 3; font-size: 14px; }
+.home-v2 .popular-card-copy > span { order: 4; margin-top: 10px; color: #38d5d0; font-size: 9px; font-weight: 800; }
+.home-v2 .trust-bar { margin-top: 22px; border: 0; border-radius: 15px; box-shadow: 0 14px 38px rgba(7,45,66,.08); }
+.home-v2 .trust-bar > div { min-height: 88px; padding: 18px 12px; }
+.home-v2 .trust-bar > div > span { color: #10a6a4; font-size: 31px; }
+.home-v2 .trust-bar strong { color: #0c293f; font-size: 11px; }
+.home-v2 .trust-bar small { font-size: 9px; }
+
+.home-v2 .yacht-home-section { max-width: 1440px; padding: 78px max(2.7vw,20px) 34px; }
+.home-v2 .section-heading { margin-bottom: 26px; }
+.home-v2 .section-heading .eyebrow { margin-bottom: 10px; color: #0b9f9c; }
+.home-v2 .section-heading h2 { color: #08263d; font-size: clamp(40px,4vw,58px); }
+.home-v2 .section-heading > p { margin: 0 0 7px; font-size: 12px; }
+.home-v2 .yacht-grid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(340px,1fr); grid-template-columns: none; gap: 18px; padding: 2px 2px 17px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #8ccbd2 transparent; }
+.home-v2 .yacht-card { height: 420px; border: 0; border-radius: 17px; scroll-snap-align: start; box-shadow: 0 14px 34px rgba(7,34,52,.12); }
+.home-v2 .yacht-card .card-image { height: 100%; padding: 16px; overflow: hidden; background-position: center; transition: transform .45s ease; }
+.home-v2 .yacht-card .card-image::after { inset: 35% 0 0; background: linear-gradient(0deg,rgba(3,23,36,.98),rgba(4,29,44,.08)); }
+.home-v2 .yacht-card:hover .card-image { transform: scale(1.015); }
+.home-v2 .yacht-card .tag { z-index: 2; padding: 7px 10px; border: 0; border-radius: 99px; background: #13a566; color: #fff; font-size: 8px; }
+.home-v2 .yacht-overlay { position: absolute; z-index: 2; left: 18px; right: 18px; bottom: 17px; color: #fff; }
+.home-v2 .yacht-overlay h3 { margin: 0 0 12px; font-family: var(--sans); font-size: 23px; line-height: 1; }
+.home-v2 .yacht-facts { display: flex; flex-wrap: wrap; gap: 14px; padding-bottom: 13px; border-bottom: 1px solid rgba(255,255,255,.25); color: #e8f1f3; font-size: 9px; }
+.home-v2 .yacht-overlay p { margin: 13px 0 8px; font-size: 10px; }
+.home-v2 .yacht-overlay p strong { font-size: 22px; }
+.home-v2 .yacht-overlay p small { color: #e8f1f3; }
+.home-v2 .yacht-overlay .card-link { color: #36d7d0; font-size: 9px; font-weight: 800; }
+
+.home-v2 .service-home-section { max-width: 1440px; margin: 0 auto; padding: 55px max(2.7vw,20px) 95px; }
+.home-v2 .service-home-section .service-deck { max-width: none; margin: 0; }
+.home-v2 .real-experience { min-height: 610px; }
+.home-v2 .include-section { padding-top: 82px; padding-bottom: 82px; }
+.home-v2 .cta-section { max-width: 1380px; min-height: 120px; margin: 0 auto 70px; padding: 25px 38px; display: flex; align-items: center; justify-content: space-between; gap: 30px; border-radius: 18px; background: linear-gradient(110deg,#059d9c,#08738c); text-align: left; box-shadow: 0 18px 42px rgba(5,116,137,.18); }
+.home-v2 .cta-section > div { display: flex; align-items: center; gap: 17px; }
+.home-v2 .cta-section > div > span { font-size: 44px; }
+.home-v2 .cta-section p { margin: 0; display: flex; flex-direction: column; }
+.home-v2 .cta-section strong { font-size: 20px; }
+.home-v2 .cta-section small { margin-top: 4px; color: #d9f8fa; font-size: 11px; }
+.home-v2 .cta-section .button { min-width: 250px; justify-content: center; border-radius: 8px; color: #087d85; }
+
+@media (max-width: 1050px) {
+  .home-v2 .home-nav-shell nav { display: none; }
+  .home-v2 .hero-motion, .home-v2 .hero-shade { right: 34%; }
+  .home-v2 .hero-feature-card { width: 34%; }
+  .home-v2 .hero-content { width: 60%; }
+  .home-v2 .hero h1 { font-size: clamp(48px,7vw,66px); }
+  .home-v2 .popular-grid { grid-auto-columns: minmax(250px,34vw); }
+  .home-v2 .cta-section { margin-inline: 20px; }
+}
+
+@media (max-width: 760px) {
+  .home-v2 .home-nav-shell { height: 72px; padding: 0 14px; }
+  .home-v2 .home-nav-shell .brand-logo { width: 48px; height: 48px; flex-basis: 48px; }
+  .home-v2 .home-nav-shell .brand { font-size: 12px; }
+  .home-v2 .home-nav-shell .nav-cta, .home-v2 .home-nav-shell .header-social-links { display: none; }
+  .home-v2 .hero { min-height: 650px; align-items: flex-end; }
+  .home-v2 .hero-motion { inset: -2%; background-position: 58% center; }
+  .home-v2 .hero-shade { inset: 0; background: linear-gradient(0deg,rgba(3,24,38,.97) 0%,rgba(3,27,43,.72) 57%,rgba(3,28,43,.17) 100%); }
+  .home-v2 .hero-feature-card { display: none; }
+  .home-v2 .hero-content { width: calc(100% - 32px); margin: 0 auto; padding: 78px 0 40px; }
+  .home-v2 .hero .eyebrow { margin-bottom: 15px; font-size: 8px; }
+  .home-v2 .hero h1 { font-size: clamp(45px,14vw,61px); line-height: .89; }
+  .home-v2 .hero-copy { margin: 17px 0; font-size: 14px; }
+  .home-v2 .hero-features { gap: 9px 15px; flex-wrap: wrap; margin-bottom: 20px; font-size: 9px; }
+  .home-v2 .hero-actions { align-items: stretch; flex-direction: column; gap: 12px; }
+  .home-v2 .hero-actions .button { width: 100%; justify-content: center; }
+  .home-v2 .hero-actions .text-button { text-align: center; }
+  .home-v2 .popular-section { padding: 29px 14px 0; }
+  .home-v2 .home-section-title { text-align: left; }
+  .home-v2 .home-section-title h2 { font-size: 17px; letter-spacing: .08em; }
+  .home-v2 .popular-grid { margin-right: -14px; padding-right: 14px; grid-auto-columns: 76vw; }
+  .home-v2 .popular-card { height: 330px; }
+  .home-v2 .trust-bar { grid-template-columns: repeat(2,1fr); }
+  .home-v2 .trust-bar > div { min-height: 92px; justify-content: flex-start; padding: 14px 12px; }
+  .home-v2 .trust-bar > div:nth-child(2) { border-right: 0; }
+  .home-v2 .trust-bar > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .home-v2 .trust-bar > div > span { font-size: 24px; }
+  .home-v2 .yacht-home-section { padding: 58px 14px 20px; }
+  .home-v2 .section-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .home-v2 .section-heading h2 { font-size: 42px; }
+  .home-v2 .section-heading > p { margin: 0; }
+  .home-v2 .yacht-grid { margin-right: -14px; padding-right: 14px; grid-auto-columns: 85vw; }
+  .home-v2 .yacht-card { height: 405px; }
+  .home-v2 .service-home-section { padding: 45px 14px 70px; }
+  .home-v2 .service-home-section .service-deck { grid-auto-columns: 82vw; }
+  .home-v2 .real-experience { min-height: 0; }
+  .home-v2 .cta-section { min-height: 0; margin: 0 14px 40px; padding: 24px 20px; align-items: stretch; flex-direction: column; border-radius: 14px; }
+  .home-v2 .cta-section > div > span { font-size: 36px; }
+  .home-v2 .cta-section strong { font-size: 17px; }
+  .home-v2 .cta-section .button { width: 100%; min-width: 0; justify-content: center; }
+}
+
+/* Homepage-only visual review. Keeps catalog, routes, admin and data untouched. */
+.home-v2 .nav-cta svg { width: 20px; height: 20px; flex: 0 0 20px; }
+.home-v2 .hero-motion { filter: saturate(1.06) brightness(1.08); }
+.home-v2 .hero-shade {
+  background: linear-gradient(90deg,rgba(3,27,44,.82) 0%,rgba(3,34,52,.55) 47%,rgba(3,35,51,.05) 100%),
+    linear-gradient(0deg,rgba(2,26,40,.27),transparent 64%);
+}
+.home-v2 .hero-actions svg { width: 21px; height: 21px; }
+.home-v2 .hero-features span { display: inline-flex; align-items: center; gap: 7px; }
+.home-v2 .hero-features svg { width: 18px; height: 18px; color: #51e0dc; stroke-width: 1.8; }
+
+.home-v2 .primary-services { position: relative; z-index: 6; max-width: 1440px; margin: -52px auto 0; padding: 0 max(2.7vw,20px); }
+.home-v2 .primary-service-deck { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 14px; }
+.home-v2 .primary-service-card { position: relative; min-height: 365px; overflow: hidden; display: flex; align-items: flex-end; border-radius: 17px; color: #fff; box-shadow: 0 16px 38px rgba(7,34,52,.17); scroll-snap-align: start; isolation: isolate; }
+.home-v2 .primary-service-photo { position: absolute; z-index: -2; inset: 0; background-size: cover; background-position: center; transition: transform .5s ease; }
+.home-v2 .primary-service-card::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(0deg,rgba(2,22,35,.97),rgba(3,28,43,.52) 42%,rgba(3,30,44,.02) 72%); }
+.home-v2 .primary-service-card:hover .primary-service-photo { transform: scale(1.055); }
+.home-v2 .primary-service-icon { position: absolute; top: 15px; right: 15px; width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(255,226,144,.72); border-radius: 50%; background: linear-gradient(145deg,rgba(255,240,193,.28),rgba(7,41,55,.46)); color: #ffe29a; box-shadow: 0 8px 24px rgba(0,0,0,.16); backdrop-filter: blur(10px); }
+.home-v2 .primary-service-icon svg { width: 21px; height: 21px; stroke-width: 1.7; }
+.home-v2 .primary-service-card > div { width: 100%; padding: 20px 18px; }
+.home-v2 .primary-service-card h2 { margin: 0 0 9px; font-family: var(--sans); font-size: 19px; line-height: 1.08; }
+.home-v2 .primary-service-card p { margin: 0; color: #e5f0f2; font-size: 10px; }
+.home-v2 .primary-service-card p strong { color: #fff; font-size: 20px; }
+.home-v2 .primary-service-card small { color: #d8e7ea; }
+.home-v2 .primary-service-card div > span { display: inline-block; margin-top: 12px; color: #3ee0d8; font-size: 9px; font-weight: 800; }
+
+.home-v2 .popular-section { padding-top: 58px; }
+.home-v2 .popular-grid { grid-auto-columns: minmax(260px,1fr); }
+.home-v2 .popular-badge,
+.home-v2 .yacht-card .tag { max-width: calc(100% - 26px); padding: 7px 12px; border: 1px solid rgba(255,235,177,.72); border-radius: 99px; background: linear-gradient(115deg,#c9952d,#f1cf72 52%,#b77b18); color: #173044; font-size: 7px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 7px 18px rgba(69,43,5,.22); }
+.home-v2 .popular-card:nth-child(2n) .popular-badge,
+.home-v2 .yacht-card:nth-child(2n) .tag { border-color: rgba(133,239,234,.72); background: linear-gradient(115deg,#087f87,#31c8c1); color: #fff; box-shadow: 0 7px 18px rgba(3,88,96,.22); }
+.home-v2 .popular-card:nth-child(3n) .popular-badge,
+.home-v2 .yacht-card:nth-child(3n) .tag { border-color: rgba(221,199,255,.7); background: linear-gradient(115deg,#6741a5,#a775dc); color: #fff; }
+.home-v2 .trust-bar svg { width: 31px; height: 31px; color: #10a6a4; flex: 0 0 31px; }
+.home-v2 .trust-bar svg.gold-icon { color: #d5a32d; fill: rgba(240,194,77,.13); }
+.home-v2 .floating-whatsapp { width: 58px; height: 58px; padding: 0; display: grid; place-items: center; border-radius: 50%; background: #13b862; }
+.home-v2 .floating-whatsapp svg { width: 31px; height: 31px; }
+.home-v2 .cta-section svg { width: 44px; height: 44px; flex: 0 0 44px; }
+.home-v2 .yacht-facts span { display: inline-flex; align-items: center; gap: 5px; }
+.home-v2 .yacht-facts svg { width: 14px; height: 14px; color: #65e2dc; stroke-width: 1.8; }
+
+@media (max-width: 1100px) {
+  .home-v2 .primary-service-deck { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(275px,34vw); overflow-x: auto; padding: 0 2px 19px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #8ccbd2 transparent; }
+}
+
+@media (max-width: 760px) {
+  .home-v2 .hero-motion { filter: saturate(1.04) brightness(1.02); }
+  .home-v2 .hero-shade { background: linear-gradient(0deg,rgba(3,24,38,.9) 0%,rgba(3,27,43,.54) 54%,rgba(3,28,43,.08) 100%); }
+  .home-v2 .primary-services { margin: 0; padding: 28px 14px 0; }
+  .home-v2 .primary-service-deck { margin-right: -14px; padding-right: 14px; grid-auto-columns: 82vw; }
+  .home-v2 .primary-service-card { min-height: 390px; }
+  .home-v2 .popular-section { padding-top: 48px; }
+  .home-v2 .popular-grid { grid-auto-columns: 82vw; }
+  .home-v2 .floating-whatsapp { display: grid; bottom: calc(16px + env(safe-area-inset-bottom)); right: 15px; }
+}
