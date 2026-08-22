@@ -52,7 +52,7 @@ export default async function Home() {
           <p className="hero-copy">{settings.heroSubtitle}</p>
           <div className="hero-features">
             <span><Anchor /> Yates privados</span>
-            <span><Waves /> Rutas en Jet Ski</span>
+            <span><Waves /> Rutas + snorkel</span>
             <span><UsersRound /> Grupos y eventos</span>
           </div>
           <div className="hero-actions">
@@ -72,7 +72,7 @@ export default async function Home() {
             return <a className="primary-service-card" key={service.id} href={servicePath(service.id)} aria-label={`Ver experiencia ${service.name}`}>
               <span className="primary-service-photo" style={{ backgroundImage: `url('${service.imageUrl}')` }} />
               <span className="primary-service-icon"><ServiceIcon /></span>
-              <div><h2>{service.name}</h2><p>Desde <strong>{service.price}</strong> <small>{service.unit}</small></p><span>Ver experiencia →</span></div>
+              <div><h2>{service.name}</h2><p>Desde <strong>{service.price}</strong> <small>{service.unit}</small></p><span>Ver opciones y precios →</span></div>
             </a>;
           })}
         </div>
@@ -140,8 +140,8 @@ export default async function Home() {
       </section>
 
       <section className="cta-section" id="contacto">
-        <div><WhatsAppIcon /><p><strong>¿Listo para vivir la experiencia?</strong><small>Escríbenos por WhatsApp y recibe atención inmediata</small></p></div>
-        <a className="button white" href={whatsapp} target="_blank" rel="noreferrer">Chatear por WhatsApp <span>→</span></a>
+        <div><WhatsAppIcon /><p><strong>¿Listo para reservar? Cuéntanos qué quieres vivir.</strong><small>Mándanos fecha, número de personas y servicio. Te enviamos opciones y disponibilidad al momento.</small></p></div>
+        <a className="button white" href={whatsapp} target="_blank" rel="noreferrer">Hablar por WhatsApp <span>→</span></a>
       </section>
 
       <footer>
