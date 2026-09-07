@@ -1,6 +1,7 @@
 import { getCatalog } from "../lib/catalog";
 import { instagramUrl, whatsappBase, whatsappDisplay } from "../lib/contact";
 import PublicHeader from "./public-header";
+import IntroCover from "./intro-cover";
 import SocialLinks from "./social-links";
 import WhatsAppIcon from "./whatsapp-icon";
 import { Anchor, CarFront, MapPin, ShieldCheck, Sparkles, Star, UsersRound, Waves } from "lucide-react";
@@ -41,6 +42,7 @@ export default async function Home() {
 
   return (
     <main className="home-v2">
+      <IntroCover backgroundImage={settings.heroImage} />
       <PublicHeader homeStyle />
 
       <section className="hero" id="inicio">
@@ -60,9 +62,6 @@ export default async function Home() {
             <a className="text-button" href="#reservados">Explorar experiencias <b>→</b></a>
           </div>
         </div>
-        <aside className="hero-feature-card" style={{ backgroundImage: `url('${settings.experienceImage}')` }}>
-          <div><strong>Experiencias de pesca 🐟</strong><span>Momentos especiales en el Pacífico</span></div>
-        </aside>
       </section>
 
       <section className="primary-services" aria-label="Servicios principales">

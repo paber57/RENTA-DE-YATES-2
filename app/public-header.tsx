@@ -17,6 +17,6 @@ export default function PublicHeader({ active = "", homeStyle = false }: { activ
   return <header className={`nav-shell${homeStyle ? " home-nav-shell" : ""}`}>
     <Link className="brand" href="/" aria-label="Renta de Yates Mazatlán, inicio"><img className="brand-logo" src="/rym-logo.webp" alt="" /><span>RENTA DE YATES<small>MAZATLÁN</small></span></Link>
     <nav aria-label="Navegación principal">{links.map((link) => <Link className={active === link.id ? "active" : ""} href={link.href} key={link.id}>{link.label}</Link>)}</nav>
-    <div className="nav-actions"><a className="whatsapp nav-cta" href={whatsapp} target="_blank" rel="noreferrer"><WhatsAppIcon /> {whatsappDisplay}</a><SocialLinks className="header-social-links" /><details className="mobile-services-menu"><summary aria-label="Abrir menú">☰</summary><div>{links.map((link) => <Link href={link.href} key={link.id}>{link.label}<span>→</span></Link>)}</div></details></div>
+    <div className="nav-actions"><a className="whatsapp nav-cta" href={whatsapp} target="_blank" rel="noreferrer"><WhatsAppIcon /> {whatsappDisplay}</a><SocialLinks className="header-social-links" /><details className="mobile-services-menu"><summary aria-label="Abrir menú">☰</summary><div>{links.map((link) => <Link href={link.href} key={link.id}>{link.label}<span>→</span></Link>)}<SocialLinks className="mobile-social-links" /></div></details></div>
   </header>;
 }
