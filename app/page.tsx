@@ -4,11 +4,12 @@ import PublicHeader from "./public-header";
 import IntroCover from "./intro-cover";
 import SocialLinks from "./social-links";
 import WhatsAppIcon from "./whatsapp-icon";
-import { Anchor, CarFront, MapPin, ShieldCheck, Sparkles, Star, UsersRound, Waves } from "lucide-react";
+import { Anchor, CarFront, Gift, MapPin, ShieldCheck, Sparkles, Star, UsersRound, Waves } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
 const whatsapp = `${whatsappBase}?text=Hola%2C%20quiero%20cotizar%20una%20experiencia%20en%20Mazatl%C3%A1n`;
+const promoWhatsapp = `${whatsappBase}?text=${encodeURIComponent("Hola, me interesa la promoción de la cuarta hora gratis en la renta de un yate en Mazatlán. ¿Me podrían compartir información?")}`;
 const serviceIcons = [Anchor, CarFront, Sparkles, Waves, Star];
 const servicePath = (id: string) => id === "yates" ? "/yates" : `/servicios/${id}`;
 
@@ -57,6 +58,12 @@ export default async function Home() {
             <span><Waves /> Rutas + snorkel</span>
             <span><UsersRound /> Grupos y eventos</span>
           </div>
+          <a className="hero-promo-card" href={promoWhatsapp} target="_blank" rel="noreferrer" aria-label="Consultar la promoción de cuarta hora gratis por WhatsApp">
+            <span className="hero-promo-label">Promoción especial</span>
+            <span className="hero-promo-title"><Gift aria-hidden="true" /><strong>¡4TA HORA <em>GRATIS!</em></strong></span>
+            <span className="hero-promo-copy">Reserva 3 horas de yate y disfruta la cuarta por nuestra cuenta.</span>
+            <span className="hero-promo-link"><WhatsAppIcon /> Solicitar promoción</span>
+          </a>
           <div className="hero-actions">
             <a className="button primary" href={whatsapp} target="_blank" rel="noreferrer"><WhatsAppIcon /> Reservar por WhatsApp</a>
             <a className="text-button" href="#reservados">Explorar experiencias <b>→</b></a>
