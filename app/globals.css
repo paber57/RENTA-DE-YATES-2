@@ -2150,35 +2150,31 @@ footer .social-links > a { color: #fff; border-color: rgba(255,255,255,.2); back
 }
 
 /* Desktop home: compact gift promotion and circular WhatsApp next to social links. */
-.home-v2 .home-nav-shell .desktop-contact-number {
-  display: inline-flex; align-items: center; gap: 8px; padding-left: 16px;
-  border-left: 1px solid rgba(255,255,255,.24); color: #fff;
-  font-size: 12px; font-weight: 800; white-space: nowrap;
-}
-.home-v2 .home-nav-shell .desktop-contact-number svg { width: 17px; height: 17px; color: #4bded5; }
 .home-v2 .home-nav-shell .desktop-whatsapp-icon {
   display: grid; place-items: center; width: 40px; height: 40px; flex: 0 0 40px;
   border: 1px solid rgba(255,255,255,.24); border-radius: 50%;
-  background: rgba(255,255,255,.1); color: #36d99c;
-  transition: transform .22s ease, border-color .22s ease, background .22s ease;
+  background: rgba(255,255,255,.1); color: #fff;
+  box-shadow: 0 7px 18px rgba(1,15,26,.16);
+  transition: transform .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease;
 }
 .home-v2 .home-nav-shell .desktop-whatsapp-icon svg { width: 21px; height: 21px; }
-.home-v2 .home-nav-shell .desktop-whatsapp-icon:hover { transform: translateY(-2px); border-color: #65dfb2; background: rgba(255,255,255,.17); }
+.home-v2 .home-nav-shell .desktop-whatsapp-icon:hover { transform: translateY(-3px) scale(1.04); border-color: rgba(255,255,255,.5); background: rgba(255,255,255,.17); box-shadow: 0 11px 24px rgba(1,15,26,.24); }
 .home-v2 .hero-promo-title .hero-promo-title-mobile,
 .home-v2 .promo-mobile-copy { display: none; }
 @media (min-width: 1051px) {
   .home-v2 .hero-promo-card {
-    width: min(370px,33vw); min-height: 250px; padding: 21px 25px 23px;
-    border-radius: 19px; box-shadow: 0 20px 48px rgba(1,15,26,.35),inset 0 0 0 3px rgba(217,169,64,.04);
+    left: calc(100% + clamp(104px,9vw,152px));
+    width: min(332px,30vw); min-height: 226px; padding: 18px 22px 20px;
+    border-radius: 18px; box-shadow: 0 18px 42px rgba(1,15,26,.32),inset 0 0 0 3px rgba(217,169,64,.04);
   }
-  .home-v2 .hero-promo-card::before { inset: 8px; border-radius: 13px; }
-  .home-v2 .hero-promo-label { margin-bottom: 19px; padding: 7px 13px; font-size: 9px; }
-  .home-v2 .hero-promo-title { width: 100%; flex-direction: row; justify-content: center; gap: 15px; text-align: left; }
-  .home-v2 .hero-promo-title > svg { width: 51px; height: 51px; flex: 0 0 51px; padding: 10px; }
-  .home-v2 .hero-promo-title strong { align-items: flex-start; font-family: var(--sans); font-size: clamp(23px,2vw,30px); font-weight: 500; line-height: 1.08; letter-spacing: -.03em; }
+  .home-v2 .hero-promo-card::before { inset: 7px; border-radius: 12px; }
+  .home-v2 .hero-promo-label { margin-bottom: 15px; padding: 6px 11px; font-size: 8px; }
+  .home-v2 .hero-promo-title { width: 100%; flex-direction: row; justify-content: center; gap: 13px; text-align: left; }
+  .home-v2 .hero-promo-title > svg { width: 44px; height: 44px; flex: 0 0 44px; padding: 9px; }
+  .home-v2 .hero-promo-title strong { align-items: flex-start; font-family: var(--sans); font-size: clamp(21px,1.8vw,27px); font-weight: 500; line-height: 1.08; letter-spacing: -.03em; }
   .home-v2 .hero-promo-title em { margin-top: 2px; color: #e9bd58; font-size: 1em; font-weight: 800; letter-spacing: -.02em; }
-  .home-v2 .hero-promo-copy { max-width: 285px; margin-top: 17px; font-size: 12px; line-height: 1.5; }
-  .home-v2 .hero-promo-link { margin-top: 17px; font-size: 10px; }
+  .home-v2 .hero-promo-copy { max-width: 270px; margin-top: 14px; font-size: 11px; line-height: 1.45; }
+  .home-v2 .hero-promo-link { margin-top: 14px; font-size: 9px; }
 }
 @media (max-width: 1050px) {
   .home-v2 .hero-promo-title .hero-promo-title-desktop,
@@ -2187,6 +2183,5 @@ footer .social-links > a { color: #fff; border-color: rgba(255,255,255,.2); back
   .home-v2 .promo-mobile-copy { display: inline; }
 }
 @media (max-width: 760px) {
-  .home-v2 .home-nav-shell .desktop-contact-number,
   .home-v2 .home-nav-shell .desktop-whatsapp-icon { display: none; }
 }
