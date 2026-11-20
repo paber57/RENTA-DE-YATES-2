@@ -2164,7 +2164,7 @@ footer .social-links > a { color: #fff; border-color: rgba(255,255,255,.2); back
 }
 .home-v2 .home-nav-shell .desktop-whatsapp-icon svg { width: 21px; height: 21px; }
 .home-v2 .home-nav-shell .desktop-whatsapp-icon:hover { transform: translateY(-2px); border-color: #65dfb2; background: rgba(255,255,255,.17); }
-.home-v2 .hero-promo-title-mobile,
+.home-v2 .hero-promo-title .hero-promo-title-mobile,
 .home-v2 .promo-mobile-copy { display: none; }
 @media (min-width: 1051px) {
   .home-v2 .hero-promo-card {
@@ -2181,9 +2181,9 @@ footer .social-links > a { color: #fff; border-color: rgba(255,255,255,.2); back
   .home-v2 .hero-promo-link { margin-top: 17px; font-size: 10px; }
 }
 @media (max-width: 1050px) {
-  .home-v2 .hero-promo-title-desktop,
+  .home-v2 .hero-promo-title .hero-promo-title-desktop,
   .home-v2 .promo-desktop-copy { display: none; }
-  .home-v2 .hero-promo-title-mobile { display: flex; }
+  .home-v2 .hero-promo-title .hero-promo-title-mobile { display: flex; }
   .home-v2 .promo-mobile-copy { display: inline; }
 }
 @media (max-width: 760px) {
