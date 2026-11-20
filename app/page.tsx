@@ -60,8 +60,8 @@ export default async function Home() {
           </div>
           <a className="hero-promo-card" href={promoWhatsapp} target="_blank" rel="noreferrer" aria-label="Consultar la promoción de cuarta hora gratis por WhatsApp">
             <span className="hero-promo-label">Promoción especial</span>
-            <span className="hero-promo-title"><Gift aria-hidden="true" /><strong>¡4TA HORA <em>GRATIS!</em></strong></span>
-            <span className="hero-promo-copy">Reserva 3 horas de yate y disfruta la cuarta por nuestra cuenta.</span>
+            <span className="hero-promo-title"><Gift aria-hidden="true" /><strong className="hero-promo-title-desktop">Tu 4ta hora <em>va de regalo</em></strong><strong className="hero-promo-title-mobile">¡4TA HORA <em>GRATIS!</em></strong></span>
+            <span className="hero-promo-copy"><span className="promo-desktop-copy">Reserva 3 horas de yate y disfruta la 4ta hora gratis.</span><span className="promo-mobile-copy">Reserva 3 horas de yate y disfruta la cuarta por nuestra cuenta.</span></span>
             <span className="hero-promo-link"><WhatsAppIcon /> Solicitar promoción</span>
           </a>
           <div className="hero-actions">
